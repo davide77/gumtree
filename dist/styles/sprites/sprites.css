@@ -1,0 +1,329 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<!-- `display: block` sprite -->
+<div class="icon-home"></div>
+
+<!-- `display: inline-block` sprite -->
+<img class="icon-home" />
+```
+*/
+.icon-all-off-hover {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -36px 0px;
+  width: 36px;
+  height: 36px;
+}
+.icon-all-off {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -180px -36px;
+  width: 36px;
+  height: 36px;
+}
+.icon-all-on-hover {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: 0px -36px;
+  width: 36px;
+  height: 36px;
+}
+.icon-all-on {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -36px -36px;
+  width: 36px;
+  height: 36px;
+}
+.icon-arrow {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -228px -244px;
+  width: 14px;
+  height: 6px;
+}
+.icon-asylum-support-off-hover {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -72px -36px;
+  width: 36px;
+  height: 36px;
+}
+.icon-asylum-support-off {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: 0px -72px;
+  width: 36px;
+  height: 36px;
+}
+.icon-asylum-support-on-hover {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -36px -72px;
+  width: 36px;
+  height: 36px;
+}
+.icon-asylum-support-on {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -72px -72px;
+  width: 36px;
+  height: 36px;
+}
+.icon-checkmark {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -228px -234px;
+  width: 15px;
+  height: 10px;
+}
+.icon-criminality-off-hover {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -108px -36px;
+  width: 36px;
+  height: 36px;
+}
+.icon-criminality-off {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -108px -72px;
+  width: 36px;
+  height: 36px;
+}
+.icon-criminality-on-hover {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: 0px -108px;
+  width: 36px;
+  height: 36px;
+}
+.icon-criminality-on {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -36px -108px;
+  width: 36px;
+  height: 36px;
+}
+.icon-disability-off-hover {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -72px -108px;
+  width: 36px;
+  height: 36px;
+}
+.icon-disability-off {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -108px -108px;
+  width: 36px;
+  height: 36px;
+}
+.icon-disability-on-hover {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -144px 0px;
+  width: 36px;
+  height: 36px;
+}
+.icon-disability-on {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -144px -36px;
+  width: 36px;
+  height: 36px;
+}
+.icon-flag {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -216px -234px;
+  width: 12px;
+  height: 18px;
+}
+.icon-gridview-off-hover {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -144px -108px;
+  width: 36px;
+  height: 36px;
+}
+.icon-gridview-off {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: 0px -144px;
+  width: 36px;
+  height: 36px;
+}
+.icon-gridview-on-hover {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -36px -144px;
+  width: 36px;
+  height: 36px;
+}
+.icon-gridview-on {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -72px -144px;
+  width: 36px;
+  height: 36px;
+}
+.icon-initial-accommodation-off  {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -108px -144px;
+  width: 36px;
+  height: 36px;
+}
+.icon-initial-accommodation-off-hover {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -144px -144px;
+  width: 36px;
+  height: 36px;
+}
+.icon-initial-accommodation-on-hover {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -180px 0px;
+  width: 36px;
+  height: 36px;
+}
+.icon-initial-accommodation-on {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: 0px 0px;
+  width: 36px;
+  height: 36px;
+}
+.icon-medical-off-hover {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -180px -72px;
+  width: 36px;
+  height: 36px;
+}
+.icon-medical-off {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -180px -108px;
+  width: 36px;
+  height: 36px;
+}
+.icon-medical-on-hover {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -180px -144px;
+  width: 36px;
+  height: 36px;
+}
+.icon-medical-on {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: 0px -180px;
+  width: 36px;
+  height: 36px;
+}
+.icon-mental-health-off-hover {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -36px -180px;
+  width: 36px;
+  height: 36px;
+}
+.icon-mental-health-off {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -72px -180px;
+  width: 36px;
+  height: 36px;
+}
+.icon-mental-health-on-hover {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -108px -180px;
+  width: 36px;
+  height: 36px;
+}
+.icon-mental-health-on {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -144px -180px;
+  width: 36px;
+  height: 36px;
+}
+.icon-pregnancy-off-hover {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -180px -180px;
+  width: 36px;
+  height: 36px;
+}
+.icon-pregnancy-off {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -216px 0px;
+  width: 36px;
+  height: 36px;
+}
+.icon-pregnancy-on-hover {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -216px -36px;
+  width: 36px;
+  height: 36px;
+}
+.icon-pregnancy-on {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -216px -72px;
+  width: 36px;
+  height: 36px;
+}
+.icon-safeguard-off-hover {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -216px -108px;
+  width: 36px;
+  height: 36px;
+}
+.icon-safeguard-off {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -216px -144px;
+  width: 36px;
+  height: 36px;
+}
+.icon-safeguard-on-hover {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -216px -180px;
+  width: 36px;
+  height: 36px;
+}
+.icon-safeguard-on {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: 0px -216px;
+  width: 36px;
+  height: 36px;
+}
+.icon-searchglass {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -234px -216px;
+  width: 16px;
+  height: 16px;
+}
+.icon-settings {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -216px -216px;
+  width: 18px;
+  height: 18px;
+}
+.icon-victim-torture-off-hover {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -108px -216px;
+  width: 36px;
+  height: 36px;
+}
+.icon-victim-torture-off {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -144px -216px;
+  width: 36px;
+  height: 36px;
+}
+.icon-victim-torture-on-hover {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -72px -216px;
+  width: 36px;
+  height: 36px;
+}
+.icon-victim-torture-on {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -36px -216px;
+  width: 36px;
+  height: 36px;
+}
+.icon-victim-violence-off-hover {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -144px -72px;
+  width: 36px;
+  height: 36px;
+}
+.icon-victim-violence-off {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -108px 0px;
+  width: 36px;
+  height: 36px;
+}
+.icon-victim-violence-on-hover {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -72px 0px;
+  width: 36px;
+  height: 36px;
+}
+.icon-victim-violence-on {
+  background-image: url(../images/png/spritesheet.png);
+  background-position: -180px -216px;
+  width: 36px;
+  height: 36px;
+}

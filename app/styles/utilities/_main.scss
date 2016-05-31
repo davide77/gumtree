@@ -1,0 +1,9 @@
+header,
+footer,
+main {
+  max-width: $site-width;
+  margin: 0 auto;
+  display: block;
+  background: $grey1;
+  overflow: hidden;
+}

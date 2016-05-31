@@ -1,0 +1,53 @@
+#navigation{
+	nav{
+		position: absolute;
+		width: 100%;
+		top: 0;
+		margin-top: 178px;
+		.container{
+			max-width: $site-width;
+		  margin:0 auto;
+		  display: block;
+			position: relative;
+			z-index: 1;
+			margin: 0 24px;
+			overflow: hidden;
+			ul{
+				margin:0 auto;
+		  	display: table;
+		  	padding-bottom: 100%;
+
+				li{
+					display: table-cell;
+					padding: 0 10px;
+					a{
+						text-transform: uppercase;
+						font-size: $text-5;
+						color: $text-white;
+						text-align: center;
+	    			display: block;
+	    			@include transition(all 0.25s linear);
+					}
+					
+					&.has-submenu{
+						.subnav-container{
+							position: absolute;
+							top: 0;
+							left:0;
+							// opacity: 0;
+							// visibility: hidden;
+							@include transition(all 0.25s linear .0s);
+						}
+						&:hover{
+							.subnav-container{
+								visibility: visible;
+								opacity: 1;
+								@include transition(all 0.25s linear .25s)
+							}
+						}
+					}
+				}
+			}
+	   }
+	}
+}

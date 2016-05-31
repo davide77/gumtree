@@ -1,0 +1,104 @@
+div{
+
+	&.human,&.machine{
+		h2{
+			color:$anchor
+		}
+		ul{
+			li{
+				i{
+					padding: 80px;
+					.icon{
+						fill:$fill-white;
+					}
+				}
+			}
+		}
+
+	} 
+}
+
+.controlls{
+	h1{
+		color:$anchor;
+		&.error{
+			color:$red;
+		}
+	}
+	fieldset.buttons{
+		ul{
+			li{
+				@include transition(all 0.35s linear);
+				position: relative;
+				padding-bottom: 30%;
+				&:hover{
+					background:$grey2;
+				}
+				label{
+						position: absolute;
+						bottom:0;
+						text-align: center;
+						font-size: $text-3;
+						width: 100%;
+						padding: 10px 0px 40px 0;
+						color: $anchor;
+						text-transform: uppercase;
+					}
+					button{
+						position: absolute;
+						top:0;
+						height: 100%;
+			 
+						border:0; 
+						&.rock{
+							background-size: 50%;
+						 	background-image: svg-background($rock);
+						 	background-color: transparent;
+						  background-repeat: no-repeat;
+						  background-position:center 40%;
+						  background-size:50%;
+						}
+						&.paper{
+							background-size: 50%;
+						 	background-image: svg-background($paper);
+						 	background-color: transparent;
+						  background-repeat: no-repeat;
+						  background-position:center 40%;
+						  background-size:50%;
+						}
+						&.scissors{
+							background-size: 50%;
+							background-image: svg-background($scissors);
+							background-color: transparent;
+						  background-repeat: no-repeat;
+						  background-position:center 40%;
+						  background-size:50%;
+						}  
+					}
+				
+			}
+		}
+	}
+
+	.options{
+		legend{
+			color:$anchor;
+		}
+		section{
+			>div{
+				display: table;
+				margin:auto;
+				>fieldset,
+				>i{
+					display: table-cell;
+					margin:auto;
+			    vertical-align: top;
+			    margin-top: 40px;
+				}
+			}
+			.icon{
+				fill:$green;
+			}
+		}
+	}
+}

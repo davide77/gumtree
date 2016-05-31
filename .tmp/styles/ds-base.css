@@ -1,0 +1,182 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+/* line 3, ../../app/styles/base/_typography.scss */
+html {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* line 8, ../../app/styles/base/_typography.scss */
+body {
+  font-size: 16px;
+  line-height: 1.625rem;
+}
+
+/* line 14, ../../app/styles/base/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+/* line 18, ../../app/styles/base/_typography.scss */
+h1, .text-1 {
+  font-size: 2rem;
+  line-height: 3.375rem;
+  margin-top: 24px;
+  margin-bottom: 20px;
+}
+
+/* line 25, ../../app/styles/base/_typography.scss */
+h2, .text-2 {
+  font-size: 2.25rem;
+  line-height: 2.625rem;
+  margin-top: 36px;
+  margin-bottom: 24px;
+}
+
+/* line 32, ../../app/styles/base/_typography.scss */
+h3, .text-3 {
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  margin-top: 30px;
+  margin-bottom: 18px;
+}
+
+/* line 39, ../../app/styles/base/_typography.scss */
+h4, .text-4 {
+  font-size: 1.1875rem;
+  line-height: 1.625rem;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+/* line 46, ../../app/styles/base/_typography.scss */
+h5, .text-5 {
+  font-size: 0.75rem;
+  line-height: 1.625rem;
+  margin-top: 18px;
+  margin-bottom: 12px;
+}
+
+/* line 53, ../../app/styles/base/_typography.scss */
+h6, .text-6 {
+  font-size: 1.1875rem;
+  line-height: 1.125rem;
+  margin-top: 18px;
+  margin-bottom: 12px;
+}
+
+/* line 60, ../../app/styles/base/_typography.scss */
+a {
+  text-decoration: none;
+  color: #fff;
+}
+/* line 63, ../../app/styles/base/_typography.scss */
+a:link, a:visited {
+  color: #fff;
+}
+/* line 67, ../../app/styles/base/_typography.scss */
+a:hover {
+  color: #00FFC2;
+  box-sizing: inherit;
+  transition: color 0.15s ease;
+}
+
+/* line 74, ../../app/styles/base/_typography.scss */
+p {
+  font-size: 0.875rem;
+  line-height: 1.625rem;
+  margin: 6px 0 18px 0;
+}
+
+/* line 80, ../../app/styles/base/_typography.scss */
+strong,
+b {
+  font-weight: 600;
+}
+
+/* line 85, ../../app/styles/base/_typography.scss */
+em,
+i {
+  font-style: italic;
+}
+
+/* line 90, ../../app/styles/base/_typography.scss */
+ol,
+ul {
+  font-variant-numeric: tabular-nums;
+  -webkit-font-feature-settings: 'tnum' 1;
+  font-feature-settings: 'tnum' 1;
+}
+
+/* line 95, ../../app/styles/base/_typography.scss */
+.xs-text-left {
+  text-align: left    !important;
+}
+/* line 96, ../../app/styles/base/_typography.scss */
+.xs-text-center {
+  text-align: center  !important;
+}
+/* line 97, ../../app/styles/base/_typography.scss */
+.xs-text-right {
+  text-align: right   !important;
+}
+/* line 98, ../../app/styles/base/_typography.scss */
+.xs-text-justify {
+  text-align: justify !important;
+}
+
+@media (min-width: 20rem) {
+  /* line 95, ../../app/styles/base/_typography.scss */
+  .sm-text-left {
+    text-align: left    !important;
+  }
+  /* line 96, ../../app/styles/base/_typography.scss */
+  .sm-text-center {
+    text-align: center  !important;
+  }
+  /* line 97, ../../app/styles/base/_typography.scss */
+  .sm-text-right {
+    text-align: right   !important;
+  }
+  /* line 98, ../../app/styles/base/_typography.scss */
+  .sm-text-justify {
+    text-align: justify !important;
+  }
+}
+@media (min-width: 48rem) {
+  /* line 95, ../../app/styles/base/_typography.scss */
+  .md-text-left {
+    text-align: left    !important;
+  }
+  /* line 96, ../../app/styles/base/_typography.scss */
+  .md-text-center {
+    text-align: center  !important;
+  }
+  /* line 97, ../../app/styles/base/_typography.scss */
+  .md-text-right {
+    text-align: right   !important;
+  }
+  /* line 98, ../../app/styles/base/_typography.scss */
+  .md-text-justify {
+    text-align: justify !important;
+  }
+}
+@media (min-width: 90rem) {
+  /* line 95, ../../app/styles/base/_typography.scss */
+  .lg-text-left {
+    text-align: left    !important;
+  }
+  /* line 96, ../../app/styles/base/_typography.scss */
+  .lg-text-center {
+    text-align: center  !important;
+  }
+  /* line 97, ../../app/styles/base/_typography.scss */
+  .lg-text-right {
+    text-align: right   !important;
+  }
+  /* line 98, ../../app/styles/base/_typography.scss */
+  .lg-text-justify {
+    text-align: justify !important;
+  }
+}
+/*# sourceMappingURL=ds-base.css.map */

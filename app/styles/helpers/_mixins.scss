@@ -1,0 +1,201 @@
+$breakpoints: (
+  xs: null,
+  sm: 20rem, // greater than 320px
+  md: 48rem, // greater than 768px
+  lg: 90rem, // greater than 1440px
+);
+
+// returns the apropriate media query
+// for the given breakpoint name
+@mixin media-query($breakpoint) {
+  @if (map-get($breakpoints, $breakpoint)) == null {
+    @content;
+  } @else {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+}
+ 
+
+
+// nest content inside breakpoint prefix classes
+// in the apropriate media query block
+@mixin generate-breakpoint-prefixes {
+  @each $breakpoint-name, $breakpoint-value in $breakpoints {
+    $breakpoint-prefix: "#{$breakpoint-name}-";
+
+    @include media-query($breakpoint-name) {
+
+      // Columns
+      .#{$breakpoint-prefix} {
+        @content;
+      }
+    }
+  }
+}
+// hide from humans not screen readers
+@mixin visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px; margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+
+// include an svg icon as a background image using variables
+@function svg-background($svg-variable) {
+  @return url("data:image/svg+xml,#{$svg-variable}");
+}
+
+
+// Prefix
+// -------------------------
+// CSS vendor prefix mixin for desktops
+// e.g. p {@include prefix((transform: translate(-50%, -50%)), webkit ms);}
+// Credit: http://www.sitepoint.com/sass-mixins-kickstart-project/
+
+@mixin prefix($map, $vendors: webkit moz ms o) {
+
+  @each $prop, $value in $map {
+    @if $vendors {
+
+      @each $vendor in $vendors {
+        #{"-" + $vendor + "-" + $prop}: #{$value};
+      }
+
+    }
+
+    // Dump regular property anyway
+    #{$prop}: #{$value};
+
+  }
+}
+
+// Keyframes
+// -------------------------
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+
+// Enables tabular figures in opentype compatible browsers
+// http://thenewcode.com/575/Elegant-Table-Data-With-OpenType
+@mixin tabular-figures {
+  font-variant-numeric: tabular-nums;
+  -moz-font-feature-settings:"tnum" 1; // Firefox 31+
+  -moz-font-feature-settings:"tnum=1";
+  -webkit-font-feature-settings: 'tnum' 1; // Chrome 31+, Android 4.4+, Opera 24+
+  font-feature-settings: 'tnum' 1; // IE10+
+}
+
+
+@mixin generate-categories-borders {
+  background-color: white;
+  padding: 0;
+  position: relative;
+
+  &.asylum-support      {border-top: $asylum-support}
+  &.criminality       {border-top: $criminality}
+  &.disability        {border-top: $disability}
+  &.initial-accommodation   {border-top: $initial-accommodation}
+  &.medication        {border-top: $medication}
+  &.pregnancy         {border-top: $pregnancy}
+  &.safeguard         {border-top: $safeguard}
+  &.mental-health       {border-top: $mental-health}
+  &.grid-view         {border-top: $grid-view}
+  &.victim-torture      {border-top: $victim-torture}
+  &.victim-violance     {border-top: $victim-violance}
+  &.all               {border-top: $all}
+}
+
+
+@mixin dropdown-box(){
+  width: 100%;
+  float: left;
+  position: relative;
+  background:$fill-white;
+  @include border-radius(5px);
+  &:after{
+    z-index: 0;
+    top:0;
+    left:-5px;
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 235px;
+    @include border-radius(5px 5px 0 0);
+    background: $grey3-opacity;
+  }
+  &:before{
+    z-index: 0;
+    bottom:0;
+    left:-5px;
+    content: "";
+    position: absolute;
+    @include border-radius(0 0 5px 5px);
+    background: $grey3-opacity;
+    height: 50%;
+    width: 235px;
+    
+  }
+}
+
+@mixin arrow-up() {
+  top:0px;
+  position: absolute;
+  right: 35px;
+    i{
+      display: inline-block;
+      position: relative;
+      &:before{//white
+        top:-18px;
+        left:4px;
+        content: "";
+        position: absolute;
+        z-index: 4;
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom: 8px solid $fill-white;
+      }
+    }
+    &:after {
+      top:-3px;
+      left:4px;
+      content: "";
+      position: absolute;
+      z-index: 1;
+      width: 0;
+      height: 0;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-bottom: 8px solid $grey2;
+    }
+    &:before {
+      top:-8px;
+      left:4px;
+      content: "";
+      position: absolute;
+      z-index: 0;
+      width: 0;
+      height: 0;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-bottom: 8px solid $grey3-opacity;
+    }
+}
+

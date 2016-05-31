@@ -1,0 +1,100 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+html {
+  font-size: $base-font-size;
+  font-family: $Montserrat;
+}
+
+body {
+  font-size: $base-font-size; //16px
+  line-height: $line-height-4; //24px
+  //add font light on body
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+h1, .text-1 {
+  font-size: $text-1; //48px
+  line-height: $line-height-1; //54px
+  margin-top: 24px;
+  margin-bottom: 20px;
+}
+
+h2, .text-2 {
+  font-size: $text-2; //36px
+  line-height: $line-height-2; //42px
+  margin-top: 36px;
+  margin-bottom: 24px;
+}
+
+h3, .text-3 {
+  font-size: $text-3; //24px
+  line-height: $line-height-3; //30px
+  margin-top: 30px;
+  margin-bottom: 18px;
+}
+
+h4, .text-4 {
+  font-size: $text-4; //19px
+  line-height: $line-height-4; //24px
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+h5, .text-5 {
+  font-size: $text-5; //12px
+  line-height: $line-height-4; //26px
+  margin-top: 18px;
+  margin-bottom: 12px;
+}
+
+h6, .text-6 {
+  font-size: $text-4; //19px
+  line-height: $line-height-5; //18px
+  margin-top: 18px;
+  margin-bottom: 12px;
+}
+
+a {
+  text-decoration: none;
+  color: $anchor;
+  &:link,
+  &:visited {
+    color: $anchor;
+  }
+  &:hover {
+    color: $anchorhover;
+    @include prefix((box-sizing: inherit), moz);
+    @include transition (color 0.15s ease);
+  }
+}
+
+p {
+  font-size: $text-6; //14px
+  line-height: $line-height-4;
+  margin: 6px 0 18px 0;
+}
+
+strong,
+b {
+  font-weight: $bold;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+ol,
+ul {
+  @include tabular-figures;
+}
+@include generate-breakpoint-prefixes {
+  &text-left    { text-align: left    !important; }
+  &text-center  { text-align: center  !important; }
+  &text-right   { text-align: right   !important; }
+  &text-justify { text-align: justify !important; }
+}
+ 

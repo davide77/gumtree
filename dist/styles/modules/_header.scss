@@ -1,0 +1,278 @@
+#global-header {
+
+    .header-wrapper{
+
+        max-width: 100%;
+        padding: 0 80px 0 15px;
+
+        .header-global {
+
+            .header-logo {
+                position:absolute;
+                margin-top: 3px;
+                a#logo {
+                    height: 50px;
+                    width: 210px;
+                    color: transparent;
+                    background: url(../content/images/icons/crests/ho-logo.png);
+                }
+                img {
+                    display: none;  // TODO: can be removed once img is removed from mark-up
+                }
+
+            }
+
+            .header-heading {
+                abbr {
+                    /* position: absolute; */
+                    /* left: 40%; */
+                }
+            }
+
+            .header-login {
+                float: right;
+                margin: 18px 0;
+                width: auto;
+                color: white;
+            }
+            .header-login:after {
+                margin-top: 0px;
+                content:url(../content/images/chooser.png);
+            }
+
+            .login-panel {
+                background-color: lighten($grey-3, 5%);
+                border: 1px solid #aaa;
+                border-radius: 10px;
+                position: absolute;
+                right: 10px;
+                top: 48px;
+                z-index: 2;
+                display: none;
+                padding: 10px;
+                min-width: 200px;
+                color: black;
+                box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+                &:before {
+                    content:url(../content/images/chooser-up.png);
+                    position: absolute;
+                    top: -16px;
+                    right: 39px;
+                }
+                .form-group{
+                    margin:0;
+                    width: auto;
+                }
+
+                .ipt-grid .cell-outline{
+                    outline: 0;
+                    padding: 0;
+
+                    .button{
+                        margin: 0 5px 5px 10px;
+                    }
+
+                }
+                .login-bottom{
+                    border-top: solid 1px #000000;
+                    border-bottom: solid 1px #000000;
+                    display: inline-block;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    width: 100%;
+
+                    img{
+                        width: 50px;
+                        height: auto;
+                        vertical-align: top;
+                        padding-bottom: 10px;
+                    }
+
+                    .button{
+                        margin-bottom: 5px;
+                    }
+                }
+                .login-text {
+                    float: left;
+                    font-size: 14px;
+                    padding-right: 35px;
+                    padding-top: 10px;
+                    width: 120px;
+                }
+                label {
+                    font-size: 14px;
+                }
+                select, button#exportAnnotations {
+                    height: 24px;
+                    font-size: 15px;
+                }
+                button.button {
+                    margin: 0 0 0 80px;
+                }
+                fieldset {
+                    margin:10px;
+                }
+                label {
+                    width: 150px;
+                    text-align: right;
+                    display: block;
+                    float: left;
+                    margin: 0 5px 0 0;
+                }
+            }
+        }
+
+        h1{
+
+            color: #fff;
+            line-height: 60px;
+            width:50%;
+            margin:0 auto;
+            text-align: center;
+            &.bold-medium{
+
+                @media (max-width: 730px){
+                    font-size: 18px;
+                }
+
+            }
+
+        }
+
+        .header-user-settings{
+
+            color: #fff;
+            font-size: 12px;
+            line-height: 60px;
+            position: absolute;
+            right: 30px;
+
+        }
+
+        #user-details{
+
+            background: #000;
+            color:#fff;
+            min-width: 300px;
+            padding: 15px;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1;
+            
+            a,p{
+
+                color:#fff;
+
+            }
+
+        }
+
+    }
+
+    .header-bar{
+
+        background-color: #9325b2;
+        height: 10px;
+    
+        min-height: 60px;
+
+    }
+
+}
+
+#global-header-bar{
+    background-color: $home-office;
+    max-width:100%;
+    margin:0;
+    width:auto;
+}
+
+main:focus {
+    outline: none;
+}
+
+div[tabindex="-1"]:focus {
+    outline: none;
+}
+
+.hide{
+    display:none;
+}
+
+.bold{
+    font-weight: bold;
+}
+#error-summary{
+    padding: 0px;
+}
+.info-summary{
+    border: 4px solid green;
+    padding: 20px 15px 15px 15px;
+    background: #C6F8C6;
+}
+
+.text-align-center{
+    text-align: center;
+}
+.float-right{
+    float: right;
+}
+.float-left{
+    float: left;
+}
+.clear {
+    clear: both;
+}
+.margin-10 {
+    margin: 10px;
+}
+.margin-h10 {
+    margin: 0 10px;
+}
+.margin-v10 {
+    margin: 10px 0;
+}
+.margin-l10 {
+    margin: 0 0 0 10px;
+}
+.margin-r10 {
+    margin: 0 0 0 10px;
+}
+.bold {
+    font-weight: bold!important;
+}
+.bold p{
+    font-weight: inherit!important;
+}
+.overflow-hidden{
+    overflow: hidden;
+}
+
+fieldset.info {
+    p {
+        margin:5px 0;
+        label { 
+            font-weight: bold;
+            width: 150px;
+            float: left;
+            text-align: right;
+            margin-right: 10px;
+        }
+    }
+}
+
+.bg__white {
+    background-color: white!important;
+}
+
+.bg__grey {
+    background-color: $grey-3!important;
+}
+
+.textLink{
+    color:black!important;
+    text-decoration: none;
+}

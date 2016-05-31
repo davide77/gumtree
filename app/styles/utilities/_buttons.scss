@@ -1,0 +1,195 @@
+a.btn,
+.btn{
+	display: inline-block;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	background: none;
+	border:0;
+	line-height: inherit;
+	@include transition(all 0.25s linear);
+	&.primary,
+	&.secondary,
+	&.tertiary{
+		font-weight: bold;
+		font-size: $text-5;
+		position: relative;
+		&:after,
+		&:before{
+			@include transition(all 0.25s linear);
+		}
+	}
+	&.primary{
+		background:$green;
+		color:$black;
+		padding: 9px 58px 9px 58px;
+		&:hover{
+			background:$fill-primary-hover;
+		}
+	}
+	&.secondary{
+		background:$grey1;
+		color:$text-white;
+		border:$border;
+		padding: 9px 58px 9px 58px;
+		&:hover{
+			background:$fill-secondary-hover;
+		}
+	}
+	&.tertiary{
+		background:none;
+		color:$grey2;
+		font-size: $text-7;
+		padding: 9px 28px 9px 28px;
+		&:hover{
+			color: $grey2;
+			background:none;
+		}
+	} 
+	&.reset{
+		color: $grey3;
+		padding: 9px 0px 9px 28px;
+	  .icon{
+	  	@include transition(all 0.25s linear);
+	  	fill:$grey3;
+	  	width:22px;
+	  	height:22px;
+			content:'';
+	    position:absolute;
+	    left:0;
+	    top:11px;
+	  }
+	  &:hover{
+	  	.icon{
+	  		fill:$grey2;
+	  	}
+	  }
+	}
+	&.play{
+		font-size: $text-3;
+		padding: 20px 58px 20px 58px;
+		span{
+			@include transition(all 0.25s linear);
+		}
+		&:hover{
+			background: $grey3;
+		}
+		&:focus{
+			.simulate{
+				opacity: 0;
+			}
+		}
+
+		&:hover:after{ 
+		}
+		&:after{
+			content:'';
+	    position:absolute;
+	    left:50%;
+	    margin-left: -10px;
+	    bottom:-11px;
+	    width:20px;
+	    height:20px;
+	    background:inherit;
+	    transform:rotate(45deg);
+	    box-shadow: inset -4px -4px 0px -3px rgba(255,255,255,1);
+		}
+		.simulate{
+			width: 100%;
+			text-align: center;
+		}
+		.result{
+			position: absolute;
+			width: 100%;
+			text-align: center;
+			top:-5px;
+			left:0;
+			@include transition(all 0.15s linear);
+
+			&.tie,
+			&.win,
+			&.lose{ 
+				top:21px;
+			}
+		}
+		.result ~ .simulate{
+			@include transition(all 0.15s linear);
+			opacity: 1;
+		}
+		.result.tie,
+		.result.win,
+		.result.lose ~ .simulate{
+			opacity: 0;
+		}
+
+	}
+ 	 
+	&.bolt{
+	    padding: 10px 0px 10px 0px;
+	    overflow: hidden;
+		span{
+			padding: 9px 58px 9px 58px;
+			@include transition(all 0.05s linear);
+			position: relative;
+			width: 100%;
+
+			&:after{
+				content: "";
+				position: absolute;
+				width: 25px;
+				height: 1px;
+				top:17px;
+				right:17px;
+				background: $fill-black;
+			}
+			&:before{
+				content: "";
+				position: absolute;
+				width: 25px;
+				height: 1px;
+				top:17px;
+				left:17px;
+				background: $fill-black;
+			}
+		}
+		&:hover{
+			span{
+				opacity:0;
+			}
+		}
+		&:hover{
+			&:before{
+				top:-4px;
+			}
+		}
+		&:before{
+			@include transition(all 0.20s linear);
+			width: 70px;
+	    height: 100%;
+	    left: 50%;
+	    margin-left: -28px;
+			content:'';
+	    position:absolute;
+			background-image: svg-background($bolt);
+		  background-repeat: no-repeat;
+		  background-position:center 0;
+		  background-size: 81.3%;
+		  -webkit-appearance: none;
+		  -moz-appearance: none;
+		  top:-50px;
+		} 
+	}
+ 
+ 	&.disabled, &[disabled]{
+	  cursor: not-allowed;
+	  opacity: 0.4;
+		filter:alpha(opacity=40);
+		&:hover{
+			border-color: rgba(0, 0, 0, 0);
+			&:before{
+				display: none;
+			}
+		}
+	}
+}
