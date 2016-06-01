@@ -102,9 +102,15 @@ a.btn,
 			position: absolute;
 			width: 100%;
 			text-align: center;
-			top:-5px;
+			top:19px;
 			left:0;
 			@include transition(all 0.15s linear);
+			
+			.counter{
+				width: 100%;
+    		text-align: center;
+				font-size: 2rem;
+			}
 
 			&.tie,
 			&.win,
@@ -121,7 +127,9 @@ a.btn,
 		.result.lose ~ .simulate{
 			opacity: 0;
 		}
-
+		.result .counter ~ .simulate{
+			opacity: 0;
+		}
 	}
  	 
 	&.bolt{

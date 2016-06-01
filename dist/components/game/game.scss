@@ -30,7 +30,7 @@ div{
 			li{
 				@include transition(all 0.35s linear);
 				position: relative;
-				padding-bottom: 30%;
+				padding-bottom: 40%;
 				&:hover{
 					background:$grey2;
 				}
@@ -52,31 +52,26 @@ div{
 						top:0;
 						height: 100%;
 						border:0; 
-						&.rock{
-							background-size: 50%;
-						 	background-image: svg-background($rock);
-						 	background-color: transparent;
-						  background-repeat: no-repeat;
-						  background-position:center 40%;
-						  background-size:50%;
-						}
-						&.paper{
-							background-size: 50%;
-						 	background-image: svg-background($paper);
-						 	background-color: transparent;
-						  background-repeat: no-repeat;
-						  background-position:center 40%;
-						  background-size:50%;
-						}
-						&.scissors{
-							background-size: 50%;
-							background-image: svg-background($scissors);
-							background-color: transparent;
-						  background-repeat: no-repeat;
-						  background-position:center 40%;
-						  background-size:50%;
-						} 
+						background: transparent;
 					}
+					label{
+						&.win{
+							.icon{
+								fill:$green;
+							}	
+						}
+						&.lose{
+							.icon{
+								fill:red;
+							}
+						}
+						.icon{
+							width: 100%;
+							fill:$fill-white; 
+						 	background-color: transparent; 
+						 }
+					}
+					
 					.score{
 						position: absolute;
 						top:0;

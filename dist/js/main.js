@@ -50,30 +50,31 @@
 
         function count() {
           //count down as we need to tell the user that something is happening
-            $(".result").html('<div class="counter">' + i + '</div>' );
-
+            $(".result").html(i);
             if (i === 0) {
                 results();
+                counter = 3
+                i = counter
             } else {
                 i--;
                 setTimeout(count, 400);
             }
+ 
         };
 
         function compare(choice1, choice2) {
             if (choice1 == choice2) {
+
                 $(".result").text("Tie!").addClass('tie');
                 $(".reset").addClass('xs-block');
             } else if (
             (choice1 == "rock" && choice2 == "scissors") || (choice1 == "scissors" && choice2 == "paper") || (choice1 == "paper" && choice2 == "rock")) {
                 $(".result").text("You win!").addClass('win');
-                //$(".score.left").removeClass('lose');
-                $(".score.left." + userChoice).addClass('win');
+                $(".score.left." + userChoice).prev('label').addClass('win');
                 $(".reset").addClass('xs-block');
             } else {
                 $(".result").text("You lose!").addClass('lose');
-                //$(".score.right").removeClass('win');
-                $(".score.right." + computerChoice).addClass('lose');
+                $(".score.right." + computerChoice).prev('label').addClass('lose');
                 $(".reset").addClass('xs-block');
             }
 
@@ -81,8 +82,8 @@
         };
 
         function results() {
-            $(".score.left." + userChoice).show().addClass('user-active');
-            $(".score.right." + computerChoice).show().addClass('computer-active');
+            $(".score.left." + userChoice).show();
+            $(".score.right." + computerChoice).show();
 
             compare(userChoice, computerChoice);
 
