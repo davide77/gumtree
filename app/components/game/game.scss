@@ -34,7 +34,10 @@ div{
 				&:hover{
 					background:$grey2;
 				}
-				label{
+				.score{
+					display: none;
+				}
+				label,.score{
 						position: absolute;
 						bottom:0;
 						text-align: center;
@@ -48,7 +51,6 @@ div{
 						position: absolute;
 						top:0;
 						height: 100%;
-			 
 						border:0; 
 						&.rock{
 							background-size: 50%;
@@ -73,14 +75,29 @@ div{
 						  background-repeat: no-repeat;
 						  background-position:center 40%;
 						  background-size:50%;
-						}  
+						} 
 					}
+					.score{
+						position: absolute;
+						top:0;
+						height: 100%;
+						border:0; 
+						&.win{
+							color:$green 
+						}
+						&.lose{
+							color:$red;
+						}		
+					} 
 				
 			}
 		}
 	}
 
 	.options{
+		.reset{
+			display: none;
+		}
 		legend{
 			color:$anchor;
 		}

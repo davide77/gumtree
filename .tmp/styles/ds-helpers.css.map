@@ -1,1 +1,7 @@
-{"version":3,"sources":["../../app/styles/helpers/_variables.scss"],"names":[],"mappings":"AAEQ,gEAAuD","file":"ds-helpers.css"}
+{
+"version": 3,
+"mappings": "AAEQ,+DAAuD",
+"sources": ["../../app/styles/helpers/_variables.scss"],
+"names": [],
+"file": "ds-helpers.css"
+}

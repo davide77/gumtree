@@ -16,8 +16,9 @@ a.btn,
 		font-size: $text-5;
 		position: relative;
 		&:after,
+		&:hover,
 		&:before{
-			@include transition(all 0.25s linear);
+			//@include transition(all 0.25s linear);
 		}
 	}
 	&.primary{
@@ -62,27 +63,25 @@ a.btn,
 	  }
 	  &:hover{
 	  	.icon{
-	  		fill:$grey2;
+	  		fill:$grey3;
 	  	}
 	  }
 	}
 	&.play{
 		font-size: $text-3;
 		padding: 20px 58px 20px 58px;
+		cursor: default;
 		span{
 			@include transition(all 0.25s linear);
 		}
 		&:hover{
-			background: $grey3;
+			background:$grey1;
 		}
 		&:focus{
 			.simulate{
 				opacity: 0;
 			}
-		}
-
-		&:hover:after{ 
-		}
+		} 
 		&:after{
 			content:'';
 	    position:absolute;
@@ -117,8 +116,8 @@ a.btn,
 			@include transition(all 0.15s linear);
 			opacity: 1;
 		}
-		.result.tie,
-		.result.win,
+		.result.tie ~ .simulate,
+		.result.win ~ .simulate,
 		.result.lose ~ .simulate{
 			opacity: 0;
 		}

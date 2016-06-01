@@ -1,6 +1,6 @@
-# ipt-design-system
+# Exercise
 
-Modular Design System for the Home Office IPT programme.
+You know the drill - Rock beats Scissors, Scissor beats Paper, Paper beats Rock.
 
 ## Deps
 

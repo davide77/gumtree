@@ -25,6 +25,7 @@
         $(".button").on("click", startup);
 
         function startup(e) {
+
             $(".button").off("click");
 
             userChoice = e.target.id;
@@ -34,10 +35,11 @@
             computerChoice = main.compChoice();
 
             $(".score").hide();
+            $(".reset").removeClass('xs-block');
             $('.lose').removeClass('lose');
             $('.win').removeClass('win');
             $('.tie').removeClass('tie');
-            $('.computerVScomputer').removeClass('computerVScomputer');
+            $('.counter').removeClass('counter');
             countDown();
         };
 
@@ -48,7 +50,8 @@
 
         function count() {
           //count down as we need to tell the user that something is happening
-            $(".result").text(i).addClass('counter');
+            $(".result").html('<div class="counter">' + i + '</div>' );
+
             if (i === 0) {
                 results();
             } else {
@@ -60,18 +63,26 @@
         function compare(choice1, choice2) {
             if (choice1 == choice2) {
                 $(".result").text("Tie!").addClass('tie');
+                $(".reset").addClass('xs-block');
             } else if (
             (choice1 == "rock" && choice2 == "scissors") || (choice1 == "scissors" && choice2 == "paper") || (choice1 == "paper" && choice2 == "rock")) {
                 $(".result").text("You win!").addClass('win');
+                //$(".score.left").removeClass('lose');
+                $(".score.left." + userChoice).addClass('win');
+                $(".reset").addClass('xs-block');
             } else {
                 $(".result").text("You lose!").addClass('lose');
+                //$(".score.right").removeClass('win');
+                $(".score.right." + computerChoice).addClass('lose');
+                $(".reset").addClass('xs-block');
             }
+
 
         };
 
         function results() {
-            $(".score.left." + userChoice).show();
-            $(".score.right." + computerChoice).show();
+            $(".score.left." + userChoice).show().addClass('user-active');
+            $(".score.right." + computerChoice).show().addClass('computer-active');
 
             compare(userChoice, computerChoice);
 
@@ -79,12 +90,13 @@
         };
 
         function reset (){
-          $(".reset").on("click", function(){
+            $(".reset").on("click", function(){
             location.reload();
           });
-          
+         
         };
         reset();
+        
 
 
     },
@@ -107,7 +119,7 @@
     computerVcomputer: function () {
         var comp1 = this.compChoice();
         $("#" + comp1).click();
-        $('.content').addClass('computerVScomputer');
+        $('.simulate').addClass('counter');
 
     }
  
