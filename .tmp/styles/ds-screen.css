@@ -927,29 +927,30 @@ a.btn,
   border: 0;
   line-height: inherit;
   transition: all 0.25s linear;
+  letter-spacing: 0.04rem;
 }
-/* line 12, ../../app/styles/utilities/_buttons.scss */
+/* line 13, ../../app/styles/utilities/_buttons.scss */
 a.btn.primary, a.btn.secondary, a.btn.tertiary,
 .btn.primary,
 .btn.secondary,
 .btn.tertiary {
   font-weight: bold;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   position: relative;
 }
-/* line 24, ../../app/styles/utilities/_buttons.scss */
+/* line 25, ../../app/styles/utilities/_buttons.scss */
 a.btn.primary,
 .btn.primary {
   background: #00FFC2;
   color: #000;
   padding: 9px 58px 9px 58px;
 }
-/* line 28, ../../app/styles/utilities/_buttons.scss */
+/* line 29, ../../app/styles/utilities/_buttons.scss */
 a.btn.primary:hover,
 .btn.primary:hover {
   background: #00FFC2;
 }
-/* line 32, ../../app/styles/utilities/_buttons.scss */
+/* line 33, ../../app/styles/utilities/_buttons.scss */
 a.btn.secondary,
 .btn.secondary {
   background: #323232;
@@ -957,12 +958,12 @@ a.btn.secondary,
   border: 1px solid white;
   padding: 9px 58px 9px 58px;
 }
-/* line 37, ../../app/styles/utilities/_buttons.scss */
+/* line 38, ../../app/styles/utilities/_buttons.scss */
 a.btn.secondary:hover,
 .btn.secondary:hover {
   background: #00FFC2;
 }
-/* line 41, ../../app/styles/utilities/_buttons.scss */
+/* line 42, ../../app/styles/utilities/_buttons.scss */
 a.btn.tertiary,
 .btn.tertiary {
   background: none;
@@ -970,19 +971,19 @@ a.btn.tertiary,
   font-size: 0.75rem;
   padding: 9px 28px 9px 28px;
 }
-/* line 46, ../../app/styles/utilities/_buttons.scss */
+/* line 47, ../../app/styles/utilities/_buttons.scss */
 a.btn.tertiary:hover,
 .btn.tertiary:hover {
   color: #202020;
   background: none;
 }
-/* line 51, ../../app/styles/utilities/_buttons.scss */
+/* line 52, ../../app/styles/utilities/_buttons.scss */
 a.btn.reset,
 .btn.reset {
   color: #7b7b7b;
   padding: 9px 0px 9px 28px;
 }
-/* line 54, ../../app/styles/utilities/_buttons.scss */
+/* line 55, ../../app/styles/utilities/_buttons.scss */
 a.btn.reset .icon,
 .btn.reset .icon {
   transition: all 0.25s linear;
@@ -995,33 +996,33 @@ a.btn.reset .icon,
   top: 11px;
 }
 /* line 65, ../../app/styles/utilities/_buttons.scss */
+a.btn.reset:hover,
+.btn.reset:hover {
+  color: #7b7b7b;
+}
+/* line 67, ../../app/styles/utilities/_buttons.scss */
 a.btn.reset:hover .icon,
 .btn.reset:hover .icon {
   fill: #7b7b7b;
 }
-/* line 70, ../../app/styles/utilities/_buttons.scss */
+/* line 72, ../../app/styles/utilities/_buttons.scss */
 a.btn.play,
 .btn.play {
   font-size: 1.5rem;
-  padding: 20px 58px 20px 58px;
+  padding: 18px 8px 18px 8px;
   cursor: default;
 }
-/* line 74, ../../app/styles/utilities/_buttons.scss */
+/* line 76, ../../app/styles/utilities/_buttons.scss */
 a.btn.play span,
 .btn.play span {
   transition: all 0.25s linear;
 }
-/* line 77, ../../app/styles/utilities/_buttons.scss */
+/* line 79, ../../app/styles/utilities/_buttons.scss */
 a.btn.play:hover,
 .btn.play:hover {
   background: #323232;
 }
-/* line 81, ../../app/styles/utilities/_buttons.scss */
-a.btn.play:focus .simulate,
-.btn.play:focus .simulate {
-  opacity: 0;
-}
-/* line 85, ../../app/styles/utilities/_buttons.scss */
+/* line 83, ../../app/styles/utilities/_buttons.scss */
 a.btn.play:after,
 .btn.play:after {
   content: '';
@@ -1035,13 +1036,18 @@ a.btn.play:after,
   transform: rotate(45deg);
   box-shadow: inset -4px -4px 0px -3px white;
 }
-/* line 97, ../../app/styles/utilities/_buttons.scss */
+/* line 95, ../../app/styles/utilities/_buttons.scss */
 a.btn.play .simulate,
 .btn.play .simulate {
   width: 100%;
   text-align: center;
 }
-/* line 101, ../../app/styles/utilities/_buttons.scss */
+/* line 98, ../../app/styles/utilities/_buttons.scss */
+a.btn.play .simulate.hide,
+.btn.play .simulate.hide {
+  opacity: 0;
+}
+/* line 102, ../../app/styles/utilities/_buttons.scss */
 a.btn.play .result,
 .btn.play .result {
   position: absolute;
@@ -1051,7 +1057,7 @@ a.btn.play .result,
   left: 0;
   transition: all 0.15s linear;
 }
-/* line 109, ../../app/styles/utilities/_buttons.scss */
+/* line 110, ../../app/styles/utilities/_buttons.scss */
 a.btn.play .result .counter,
 .btn.play .result .counter {
   width: 100%;
@@ -1066,12 +1072,6 @@ a.btn.play .result.tie, a.btn.play .result.win, a.btn.play .result.lose,
   top: 21px;
 }
 /* line 121, ../../app/styles/utilities/_buttons.scss */
-a.btn.play .result ~ .simulate,
-.btn.play .result ~ .simulate {
-  transition: all 0.15s linear;
-  opacity: 1;
-}
-/* line 125, ../../app/styles/utilities/_buttons.scss */
 a.btn.play .result.tie ~ .simulate,
 a.btn.play .result.win ~ .simulate,
 a.btn.play .result.lose ~ .simulate,
@@ -1080,18 +1080,13 @@ a.btn.play .result.lose ~ .simulate,
 .btn.play .result.lose ~ .simulate {
   opacity: 0;
 }
-/* line 130, ../../app/styles/utilities/_buttons.scss */
-a.btn.play .result .counter ~ .simulate,
-.btn.play .result .counter ~ .simulate {
-  opacity: 0;
-}
-/* line 135, ../../app/styles/utilities/_buttons.scss */
+/* line 128, ../../app/styles/utilities/_buttons.scss */
 a.btn.bolt,
 .btn.bolt {
   padding: 10px 0px 10px 0px;
   overflow: hidden;
 }
-/* line 138, ../../app/styles/utilities/_buttons.scss */
+/* line 131, ../../app/styles/utilities/_buttons.scss */
 a.btn.bolt span,
 .btn.bolt span {
   padding: 9px 58px 9px 58px;
@@ -1099,7 +1094,7 @@ a.btn.bolt span,
   position: relative;
   width: 100%;
 }
-/* line 144, ../../app/styles/utilities/_buttons.scss */
+/* line 137, ../../app/styles/utilities/_buttons.scss */
 a.btn.bolt span:after,
 .btn.bolt span:after {
   content: "";
@@ -1110,7 +1105,7 @@ a.btn.bolt span:after,
   right: 17px;
   background: #000;
 }
-/* line 153, ../../app/styles/utilities/_buttons.scss */
+/* line 146, ../../app/styles/utilities/_buttons.scss */
 a.btn.bolt span:before,
 .btn.bolt span:before {
   content: "";
@@ -1121,17 +1116,17 @@ a.btn.bolt span:before,
   left: 17px;
   background: #000;
 }
-/* line 164, ../../app/styles/utilities/_buttons.scss */
+/* line 157, ../../app/styles/utilities/_buttons.scss */
 a.btn.bolt:hover span,
 .btn.bolt:hover span {
   opacity: 0;
 }
-/* line 169, ../../app/styles/utilities/_buttons.scss */
+/* line 162, ../../app/styles/utilities/_buttons.scss */
 a.btn.bolt:hover:before,
 .btn.bolt:hover:before {
   top: -4px;
 }
-/* line 173, ../../app/styles/utilities/_buttons.scss */
+/* line 166, ../../app/styles/utilities/_buttons.scss */
 a.btn.bolt:before,
 .btn.bolt:before {
   transition: all 0.2s linear;
@@ -1149,7 +1144,7 @@ a.btn.bolt:before,
   -moz-appearance: none;
   top: -50px;
 }
-/* line 191, ../../app/styles/utilities/_buttons.scss */
+/* line 184, ../../app/styles/utilities/_buttons.scss */
 a.btn.disabled, a.btn[disabled],
 .btn.disabled,
 .btn[disabled] {
@@ -1157,13 +1152,13 @@ a.btn.disabled, a.btn[disabled],
   opacity: 0.4;
   filter: alpha(opacity=40);
 }
-/* line 195, ../../app/styles/utilities/_buttons.scss */
+/* line 188, ../../app/styles/utilities/_buttons.scss */
 a.btn.disabled:hover, a.btn[disabled]:hover,
 .btn.disabled:hover,
 .btn[disabled]:hover {
   border-color: transparent;
 }
-/* line 197, ../../app/styles/utilities/_buttons.scss */
+/* line 190, ../../app/styles/utilities/_buttons.scss */
 a.btn.disabled:hover:before, a.btn[disabled]:hover:before,
 .btn.disabled:hover:before,
 .btn[disabled]:hover:before {
@@ -4040,28 +4035,45 @@ div.human ul li i .icon, div.machine ul li i .icon {
 .controlls fieldset.buttons ul li {
   transition: all 0.35s linear;
   position: relative;
-  padding-bottom: 40%;
+  padding-top: 28%;
+  margin-bottom: 20px;
 }
-/* line 34, ../../app/components/game/game.scss */
+@media (max-width: 800px) {
+  /* line 30, ../../app/components/game/game.scss */
+  .controlls fieldset.buttons ul li {
+    padding-top: 48%;
+  }
+}
+/* line 40, ../../app/components/game/game.scss */
 .controlls fieldset.buttons ul li:hover {
   background: #202020;
 }
-/* line 37, ../../app/components/game/game.scss */
+/* line 43, ../../app/components/game/game.scss */
 .controlls fieldset.buttons ul li .score {
   display: none;
 }
-/* line 40, ../../app/components/game/game.scss */
+/* line 46, ../../app/components/game/game.scss */
 .controlls fieldset.buttons ul li label, .controlls fieldset.buttons ul li .score {
   position: absolute;
+  top: 10%;
   bottom: 0;
-  text-align: center;
-  font-size: 1.5rem;
   width: 100%;
-  padding: 10px 0px 40px 0;
-  color: #fff;
   text-transform: uppercase;
 }
-/* line 50, ../../app/components/game/game.scss */
+/* line 53, ../../app/components/game/game.scss */
+.controlls fieldset.buttons ul li a {
+  padding: 10px 0px 40px 0;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #fff;
+  overflow: hidden;
+  position: absolute;
+  text-overflow: clip;
+  top: 76%;
+  width: 100%;
+  text-transform: uppercase;
+}
+/* line 65, ../../app/components/game/game.scss */
 .controlls fieldset.buttons ul li button {
   position: absolute;
   top: 0;
@@ -4069,58 +4081,65 @@ div.human ul li i .icon, div.machine ul li i .icon {
   border: 0;
   background: transparent;
 }
-/* line 59, ../../app/components/game/game.scss */
+/* line 74, ../../app/components/game/game.scss */
 .controlls fieldset.buttons ul li label.win .icon {
   fill: #00FFC2;
 }
-/* line 64, ../../app/components/game/game.scss */
+/* line 79, ../../app/components/game/game.scss */
 .controlls fieldset.buttons ul li label.lose .icon {
   fill: red;
 }
-/* line 68, ../../app/components/game/game.scss */
+/* line 83, ../../app/components/game/game.scss */
 .controlls fieldset.buttons ul li label .icon {
   width: 100%;
   fill: #fff;
   background-color: transparent;
 }
-/* line 75, ../../app/components/game/game.scss */
+/* line 90, ../../app/components/game/game.scss */
 .controlls fieldset.buttons ul li .score {
   position: absolute;
   top: 0;
   height: 100%;
   border: 0;
 }
-/* line 80, ../../app/components/game/game.scss */
+/* line 95, ../../app/components/game/game.scss */
 .controlls fieldset.buttons ul li .score.win {
   color: #00FFC2;
 }
-/* line 83, ../../app/components/game/game.scss */
+/* line 98, ../../app/components/game/game.scss */
 .controlls fieldset.buttons ul li .score.lose {
   color: #ff0000;
 }
-/* line 93, ../../app/components/game/game.scss */
+/* line 108, ../../app/components/game/game.scss */
 .controlls .options .reset {
   display: none;
+  text-align: center;
+  margin: 0px auto;
+  text-indent: 0;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 0%;
+  position: absolute;
 }
-/* line 96, ../../app/components/game/game.scss */
+/* line 118, ../../app/components/game/game.scss */
 .controlls .options legend {
   color: #fff;
 }
-/* line 100, ../../app/components/game/game.scss */
-.controlls .options section > div {
+/* line 122, ../../app/components/game/game.scss */
+.controlls .options section .wrapper {
   display: table;
   margin: auto;
 }
-/* line 103, ../../app/components/game/game.scss */
-.controlls .options section > div > fieldset,
-.controlls .options section > div > i {
-  display: table-cell;
+/* line 125, ../../app/components/game/game.scss */
+.controlls .options section .wrapper > fieldset,
+.controlls .options section .wrapper > i {
+  float: left;
   margin: auto;
   vertical-align: top;
-  margin-top: 40px;
 }
-/* line 111, ../../app/components/game/game.scss */
+/* line 132, ../../app/components/game/game.scss */
 .controlls .options section .icon {
+  width: 110px;
   fill: #00FFC2;
 }
 

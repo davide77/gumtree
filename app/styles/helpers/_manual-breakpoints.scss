@@ -1,0 +1,26 @@
+
+@mixin manualBreakpoint($point) {
+ 
+  
+  @if $point == phonePortrait {
+    @media // iPhone (portrait and landscape)
+    handheld,
+      only screen and (min-device-pixel-ratio: 2),
+      only screen and (max-width: #{$bp-iphone-max})
+                  and (min-width: #{$bp-iphone-min}){
+      @content;
+    }
+  } @else if $point == tabletPortrait {
+    @media (max-width: 800px) {
+      @content;
+    }
+  } @else if $point == tabletLandscape {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }  @else if $point == largeDesktop {
+    @media (min-width: 90rem) {
+      @content;
+    }
+  } 
+} 

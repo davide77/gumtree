@@ -9,11 +9,12 @@ a.btn,
 	border:0;
 	line-height: inherit;
 	@include transition(all 0.25s linear);
+	letter-spacing: 0.04rem;
 	&.primary,
 	&.secondary,
 	&.tertiary{
 		font-weight: bold;
-		font-size: $text-5;
+		font-size: $text-6;
 		position: relative;
 		&:after,
 		&:hover,
@@ -62,6 +63,7 @@ a.btn,
 	    top:11px;
 	  }
 	  &:hover{
+	  	color:$grey3;
 	  	.icon{
 	  		fill:$grey3;
 	  	}
@@ -69,7 +71,7 @@ a.btn,
 	}
 	&.play{
 		font-size: $text-3;
-		padding: 20px 58px 20px 58px;
+		padding: 18px 8px 18px 8px;
 		cursor: default;
 		span{
 			@include transition(all 0.25s linear);
@@ -77,11 +79,7 @@ a.btn,
 		&:hover{
 			background:$grey1;
 		}
-		&:focus{
-			.simulate{
-				opacity: 0;
-			}
-		} 
+	
 		&:after{
 			content:'';
 	    position:absolute;
@@ -97,6 +95,9 @@ a.btn,
 		.simulate{
 			width: 100%;
 			text-align: center;
+			&.hide{
+				opacity: 0;
+			}
 		}
 		.result{
 			position: absolute;
@@ -111,23 +112,15 @@ a.btn,
     		text-align: center;
 				font-size: 2rem;
 			}
-
 			&.tie,
 			&.win,
 			&.lose{ 
 				top:21px;
 			}
 		}
-		.result ~ .simulate{
-			@include transition(all 0.15s linear);
-			opacity: 1;
-		}
 		.result.tie ~ .simulate,
 		.result.win ~ .simulate,
 		.result.lose ~ .simulate{
-			opacity: 0;
-		}
-		.result .counter ~ .simulate{
 			opacity: 0;
 		}
 	}

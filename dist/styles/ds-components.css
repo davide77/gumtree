@@ -67,28 +67,45 @@ div.human ul li i .icon, div.machine ul li i .icon {
 .controlls fieldset.buttons ul li {
   transition: all 0.35s linear;
   position: relative;
-  padding-bottom: 40%;
+  padding-top: 28%;
+  margin-bottom: 20px;
 }
-/* line 34, ../../app/components/game/game.scss */
+@media (max-width: 800px) {
+  /* line 30, ../../app/components/game/game.scss */
+  .controlls fieldset.buttons ul li {
+    padding-top: 48%;
+  }
+}
+/* line 40, ../../app/components/game/game.scss */
 .controlls fieldset.buttons ul li:hover {
   background: #202020;
 }
-/* line 37, ../../app/components/game/game.scss */
+/* line 43, ../../app/components/game/game.scss */
 .controlls fieldset.buttons ul li .score {
   display: none;
 }
-/* line 40, ../../app/components/game/game.scss */
+/* line 46, ../../app/components/game/game.scss */
 .controlls fieldset.buttons ul li label, .controlls fieldset.buttons ul li .score {
   position: absolute;
+  top: 10%;
   bottom: 0;
-  text-align: center;
-  font-size: 1.5rem;
   width: 100%;
-  padding: 10px 0px 40px 0;
-  color: #fff;
   text-transform: uppercase;
 }
-/* line 50, ../../app/components/game/game.scss */
+/* line 53, ../../app/components/game/game.scss */
+.controlls fieldset.buttons ul li a {
+  padding: 10px 0px 40px 0;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #fff;
+  overflow: hidden;
+  position: absolute;
+  text-overflow: clip;
+  top: 76%;
+  width: 100%;
+  text-transform: uppercase;
+}
+/* line 65, ../../app/components/game/game.scss */
 .controlls fieldset.buttons ul li button {
   position: absolute;
   top: 0;
@@ -96,59 +113,65 @@ div.human ul li i .icon, div.machine ul li i .icon {
   border: 0;
   background: transparent;
 }
-/* line 59, ../../app/components/game/game.scss */
+/* line 74, ../../app/components/game/game.scss */
 .controlls fieldset.buttons ul li label.win .icon {
   fill: #00FFC2;
 }
-/* line 64, ../../app/components/game/game.scss */
+/* line 79, ../../app/components/game/game.scss */
 .controlls fieldset.buttons ul li label.lose .icon {
   fill: red;
 }
-/* line 68, ../../app/components/game/game.scss */
+/* line 83, ../../app/components/game/game.scss */
 .controlls fieldset.buttons ul li label .icon {
   width: 100%;
   fill: #fff;
   background-color: transparent;
 }
-/* line 75, ../../app/components/game/game.scss */
+/* line 90, ../../app/components/game/game.scss */
 .controlls fieldset.buttons ul li .score {
   position: absolute;
   top: 0;
   height: 100%;
   border: 0;
 }
-/* line 80, ../../app/components/game/game.scss */
+/* line 95, ../../app/components/game/game.scss */
 .controlls fieldset.buttons ul li .score.win {
   color: #00FFC2;
 }
-/* line 83, ../../app/components/game/game.scss */
+/* line 98, ../../app/components/game/game.scss */
 .controlls fieldset.buttons ul li .score.lose {
   color: #ff0000;
 }
-/* line 93, ../../app/components/game/game.scss */
+/* line 108, ../../app/components/game/game.scss */
 .controlls .options .reset {
   display: none;
+  text-align: center;
+  margin: 0px auto;
+  text-indent: 0;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 0%;
+  position: absolute;
 }
-/* line 96, ../../app/components/game/game.scss */
+/* line 118, ../../app/components/game/game.scss */
 .controlls .options legend {
   color: #fff;
 }
-/* line 100, ../../app/components/game/game.scss */
-.controlls .options section > div {
+/* line 122, ../../app/components/game/game.scss */
+.controlls .options section .wrapper {
   display: table;
   margin: auto;
 }
-/* line 103, ../../app/components/game/game.scss */
-.controlls .options section > div > fieldset,
-.controlls .options section > div > i {
-  display: table-cell;
+/* line 125, ../../app/components/game/game.scss */
+.controlls .options section .wrapper > fieldset,
+.controlls .options section .wrapper > i {
+  float: left;
   margin: auto;
   vertical-align: top;
-  margin-top: 40px;
 }
-/* line 111, ../../app/components/game/game.scss */
+/* line 132, ../../app/components/game/game.scss */
 .controlls .options section .icon {
+  width: 110px;
   fill: #00FFC2;
 }
-
 /*# sourceMappingURL=ds-components.css.map */

@@ -26,6 +26,8 @@
 
             function startup(e) {
 
+                $('.simulate').addClass('hide');
+
                 $(".button").off("click");
 
                 userChoice = e.target.id;
@@ -45,13 +47,12 @@
                 countDown();
             };
 
-
             function countDown() {
-                count();
+               count();
             };
 
             function count() {
-              //count down as we need to tell the user that something is happening
+                //count down as we need to tell the user that something is happening
                 $(".result").html(i);
                 if (i === 0) {
                     results();
@@ -59,10 +60,10 @@
                     i = counter
                 } else {
                     i--;
-                    setTimeout(count, 400);
+                    setTimeout(count, 700);
                 }
-     
             };
+
 
             function compare(choice1, choice2) {
                 if (choice1 == choice2) {
@@ -73,20 +74,20 @@
                 (choice1 == "rock" && choice2 == "scissors") || (choice1 == "scissors" && choice2 == "paper") || (choice1 == "paper" && choice2 == "rock")) {
                     $(".result").text("You win!").addClass('win');
 
-                    $(".score.left." + userChoice).prev('label').addClass('win');
-                    $(".score.right." + computerChoice).prev('label').addClass('lose');
+                    $('#'+choice1).next('label').addClass('win');
+                    $('#'+choice2).next('label').addClass('lose');
 
                     $(".reset").addClass('xs-block');
                 } else {
                     $(".result").text("You lose!").addClass('lose');
 
-                    $(".score.right." + computerChoice).prev('label').addClass('lose');
-                    $(".score.left." + userChoice).prev('label').addClass('win');
+                    $('#'+choice1).next('label').addClass('win');
+                    $('#'+choice2).next('label').addClass('lose');
 
                     $(".reset").addClass('xs-block');
                 }
-     
             };
+ 
 
             function results() {
                 $(".score.left." + userChoice).show();

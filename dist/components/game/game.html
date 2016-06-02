@@ -1,31 +1,33 @@
 <div class="clearfix">
 	<div class=" xs-block xs-mx-auto">
 
-		<div class="referee xs-block xs-mx-auto xs-col-4">
+		<div class="referee xs-block xs-mx-auto xs-col-4  sm-col-4 md-col-3 sx-mb0 sm-mb0 md-mb0">
 			<a class="btn secondary play xs-block xs-mx-auto">
 				<span class="result"></span>
-				<span class="simulate">"Let's play"</span>
+				<span class="simulate">&#8220;Let's play&#8221;</span>
 			</a>
 		</div>
 
  
 
 
-		<article class="controlls xs-block xs-mx-auto">
+		<article class="clearfix controlls xs-block xs-mx-auto ">
 			
-			<fieldset class="buttons xs-col-8 xs-block xs-mx-auto xs-mt6">
+			<fieldset class="buttons xs-col-7 xs-block xs-mx-auto xs-mt3 xs-mb3">
 
 
 				<ul class="col xs-col-12">
 					<li class="col xs-col-4">
 						<button class="button clickable rock col xs-col-12" id="rock"></button>
 						<label class="xs-mt2 sm-mt0 md-mt0" for="rock">
-							<svg class="icon">
-								<use xlink:href="#shape-rock"/>
-							</svg>
-							Rock</label>
-						<i class="score left rock xs-mt2 sm-mt0 md-mt0"  id="rock_left">Rock</i>
-						<i class="score right rock xs-mt2 sm-mt0 md-mt0"  id="rock_right">Rock</i>
+								<svg class="icon">
+									<use xlink:href="#shape-rock"/>
+								</svg>
+							
+						</label>
+						<a itemprop="Rock">Rock</a>
+						<i class="score left rock xs-mt2 sm-mt0 md-mt0"  id="rock_left"></i>
+						<i class="score right rock xs-mt2 sm-mt0 md-mt0"  id="rock_right"></i>
 					</li>
 
 
@@ -33,12 +35,14 @@
 						<button  class="button clickable paper col xs-col-12" id="paper"></button>
 						
 						<label class="xs-mt2 sm-mt0 md-mt0" for="paper">
-						<svg class="icon">
+							<svg class="icon">
 								<use xlink:href="#shape-paper"/>
 							</svg>
-							Paper</label>
-						<i class="score right paper xs-mt2 sm-mt0 md-mt0" id="paper_right">Paper</i>
-						<i class="score left paper xs-mt2 sm-mt0 md-mt0 " id="paper_left">Paper</i>
+							
+						</label>
+						<a itemprop="Paper" >Paper</a>
+						<i class="score right paper xs-mt2 sm-mt0 md-mt0" id="paper_right"></i>
+						<i class="score left paper xs-mt2 sm-mt0 md-mt0 " id="paper_left"></i>
 					</li>
 
 
@@ -46,12 +50,14 @@
 						<button  class="button clickable scissors col xs-col-12" id="scissors"></button>
 						
 						<label class="xs-mt2 sm-mt0 md-mt0" for="scissors">
-						<svg class="icon">
+							<svg class="icon">
 								<use xlink:href="#shape-scissors"/>
 							</svg>
-							Scissor</label>
-						<i class="score right scissors xs-mt2 sm-mt0 md-mt0" id="scissors_right">Scissor</i>
-						<i class="score left scissors xs-mt2 sm-mt0 md-mt0 " id="scissors_left">Scissor</i>
+							
+						</label>
+						<a itemprop="Scissor">Scissor</a>
+						<i class="score right scissors xs-mt2 sm-mt0 md-mt0" id="scissors_right"></i>
+						<i class="score left scissors xs-mt2 sm-mt0 md-mt0 " id="scissors_left"></i>
 					</li>
 
 
@@ -62,33 +68,36 @@
 
 			</fieldset>
 
-			<div class="options col xs-col-12">
+			<div class="clearfix options col xs-col-12 xs-relative xs-pt6">
 
 				<button class="btn tertiary reset xs-mb2 xs-mt2 xs-mx-auto">
 						<svg class="icon">
 							<use xlink:href="#shape-reset"/>
 						</svg>
-						Reset game</button>
+						Reset game
+				</button>
 				
-				<legend class="xs-col-8 xs-text-center xs-block xs-mx-auto xs-pb2 xs-pt2">Witness two computers battle it out</legend>
 
 				<section class="col xs-col-12">
-					<div class="xs-col-6">
-					<i class="xs-col-2">
-						<svg class="icon">
-							<use xlink:href="#shape-noun_469519_cc"/>
-						</svg>
-					</i>
 
-						<fieldset class="xs-col-2">
-							<button class="btn primary bolt xs-block xs-mx-auto" id="computervcomputer"><span>COMPUTER BATTLE</span></button>
-						</fieldset>
+					<div class="wrapper">
+						<i class="robot">
+							<svg class="icon">
+								<use xlink:href="#shape-noun_469519_cc"/>
+							</svg>
+						</i>
+ 
 
-					<i class="xs-col-2">
-						<svg class="icon">
-							<use xlink:href="#shape-noun_470824_cc"/>
-						</svg>
-					</i>
+							<fieldset class="xs-block xs-mx-auto">
+								<legend class="xs-text-center xs-block xs-pb2">Witness two computers battle it out</legend>
+								<button class="btn primary bolt xs-mx-auto xs-block" id="computervcomputer"><span>COMPUTER BATTLE</span></button>
+							</fieldset>
+
+						<i class="robot">
+							<svg class="icon">
+								<use xlink:href="#shape-noun_470824_cc"/>
+							</svg>
+						</i>
 					</div>
 				</section>
 				
