@@ -32,7 +32,7 @@ div{
 				position: relative;
 				padding-top: 28%;
 				margin-bottom: 20px;
-				
+
 				@include manualBreakpoint(tabletPortrait) {
 					padding-top: 48%;
 				} 

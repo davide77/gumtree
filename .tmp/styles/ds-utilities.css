@@ -1020,15 +1020,17 @@ a.btn.play .result .counter,
   width: 100%;
   text-align: center;
   font-size: 2rem;
+  animation: icon-animation 2s 1;
 }
-/* line 115, ../../app/styles/utilities/_buttons.scss */
+/* line 116, ../../app/styles/utilities/_buttons.scss */
 a.btn.play .result.tie, a.btn.play .result.win, a.btn.play .result.lose,
 .btn.play .result.tie,
 .btn.play .result.win,
 .btn.play .result.lose {
   top: 21px;
+  animation: icon-animation 2s 1;
 }
-/* line 121, ../../app/styles/utilities/_buttons.scss */
+/* line 123, ../../app/styles/utilities/_buttons.scss */
 a.btn.play .result.tie ~ .simulate,
 a.btn.play .result.win ~ .simulate,
 a.btn.play .result.lose ~ .simulate,
@@ -1037,13 +1039,13 @@ a.btn.play .result.lose ~ .simulate,
 .btn.play .result.lose ~ .simulate {
   opacity: 0;
 }
-/* line 128, ../../app/styles/utilities/_buttons.scss */
+/* line 130, ../../app/styles/utilities/_buttons.scss */
 a.btn.bolt,
 .btn.bolt {
   padding: 10px 0px 10px 0px;
   overflow: hidden;
 }
-/* line 131, ../../app/styles/utilities/_buttons.scss */
+/* line 133, ../../app/styles/utilities/_buttons.scss */
 a.btn.bolt span,
 .btn.bolt span {
   padding: 9px 58px 9px 58px;
@@ -1051,7 +1053,7 @@ a.btn.bolt span,
   position: relative;
   width: 100%;
 }
-/* line 137, ../../app/styles/utilities/_buttons.scss */
+/* line 139, ../../app/styles/utilities/_buttons.scss */
 a.btn.bolt span:after,
 .btn.bolt span:after {
   content: "";
@@ -1062,7 +1064,7 @@ a.btn.bolt span:after,
   right: 17px;
   background: #000;
 }
-/* line 146, ../../app/styles/utilities/_buttons.scss */
+/* line 148, ../../app/styles/utilities/_buttons.scss */
 a.btn.bolt span:before,
 .btn.bolt span:before {
   content: "";
@@ -1073,17 +1075,17 @@ a.btn.bolt span:before,
   left: 17px;
   background: #000;
 }
-/* line 157, ../../app/styles/utilities/_buttons.scss */
+/* line 159, ../../app/styles/utilities/_buttons.scss */
 a.btn.bolt:hover span,
 .btn.bolt:hover span {
   opacity: 0;
 }
-/* line 162, ../../app/styles/utilities/_buttons.scss */
+/* line 164, ../../app/styles/utilities/_buttons.scss */
 a.btn.bolt:hover:before,
 .btn.bolt:hover:before {
   top: -4px;
 }
-/* line 166, ../../app/styles/utilities/_buttons.scss */
+/* line 168, ../../app/styles/utilities/_buttons.scss */
 a.btn.bolt:before,
 .btn.bolt:before {
   transition: all 0.2s linear;
@@ -1101,7 +1103,7 @@ a.btn.bolt:before,
   -moz-appearance: none;
   top: -50px;
 }
-/* line 184, ../../app/styles/utilities/_buttons.scss */
+/* line 186, ../../app/styles/utilities/_buttons.scss */
 a.btn.disabled, a.btn[disabled],
 .btn.disabled,
 .btn[disabled] {
@@ -1109,19 +1111,37 @@ a.btn.disabled, a.btn[disabled],
   opacity: 0.4;
   filter: alpha(opacity=40);
 }
-/* line 188, ../../app/styles/utilities/_buttons.scss */
+/* line 190, ../../app/styles/utilities/_buttons.scss */
 a.btn.disabled:hover, a.btn[disabled]:hover,
 .btn.disabled:hover,
 .btn[disabled]:hover {
   border-color: transparent;
 }
-/* line 190, ../../app/styles/utilities/_buttons.scss */
+/* line 192, ../../app/styles/utilities/_buttons.scss */
 a.btn.disabled:hover:before, a.btn[disabled]:hover:before,
 .btn.disabled:hover:before,
 .btn[disabled]:hover:before {
   display: none;
 }
 
+@keyframes icon-animation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    transform: scale(0.5);
+  }
+  90% {
+    opacity: 0;
+  }
+}
 /* line 1, ../../app/styles/utilities/_main.scss */
 header,
 footer,
